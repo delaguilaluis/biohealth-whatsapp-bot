@@ -1,0 +1,7 @@
+{
+  "name": "begin-app-post-messages",
+  "dependencies": {
+    "@architect/functions": "latest",
+    "twilio": "^3.48.2"
+  }
+}
