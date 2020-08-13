@@ -25,7 +25,7 @@ exports.handler = async function handler(request) {
     const message = await client.messages.create({
       from: "whatsapp:+14155238886",
       to: body.From,
-      body: message,
+      body: text,
     });
 
     console.log(message.sid);
