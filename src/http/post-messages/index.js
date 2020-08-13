@@ -10,12 +10,12 @@ exports.handler = async function handler(request) {
   const input = body.Body.toUpperCase();
 
   let text;
-  if (["HOLA", "AYUDA"].includes(input)) {
+  if (input.includes("HOLA") || input.includes("AYUDA")) {
     text =
-      "Gracias por comunicarte con BioHealth. Si deseas conocer nuestro catálogo de servicios y productos, puedes verlo en nuestro perfil ⬆️.\nSi deséas agendar una toma de muestra a domicilio, envía MUESTRA.\nSi deseas chatear con nosotros, envía CHAT.";
+      "Gracias por comunicarte con BioHealth. Si deseas conocer nuestro catálogo de servicios y productos, puedes verlo en nuestro perfil de WhatsApp ⬆️.\nSi deséas agendar una toma de muestra a domicilio, envía MUESTRA.\nSi deseas chatear con nosotros, envía CHAT.";
   } else if (input === "MUESTRA") {
     text =
-      "Para agendar la toma de muestra necesitamos que llenes este formulario: https://www.biohealth.com.gt/formulario-muestra y nos lo envíes por acá o a nuestro correo info@biohealth.com.gt";
+      "Para agendar la toma de muestra necesitamos que llenes este formulario: https://www.biohealth.com.gt/formulario-muestra.pdf y nos lo envíes por acá o a nuestro correo info@biohealth.com.gt";
   } else if (input === "CHAT") {
     text =
       "Puedes iniciar tu conversación ahora y uno de nuestros agentes te contestará a la brevedad. Gracias por tu paciencia.";
